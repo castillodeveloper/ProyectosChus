@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Caja de Loot</title>
+    <!-- Importación de la fuente Cinzel desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>VGC CHAMPIONS HANDICAP ROULETTE</h1>
+        <div class="box" onclick="openBox()">Abrir Caja</div>
+        
+        <div class="roulette-container">
+            <div class="roulette" id="roulette">
+                <!-- Común Items -->
+                <div class="item" style="background-color: #b0b0b0">1 rerol para cada team</div>
+                <div class="item" style="background-color: #b0b0b0">Partida sin hándicap</div>
+                <div class="item" style="background-color: #b0b0b0">Cada torre otorga 1 kill</div>
+                <div class="item" style="background-color: #b0b0b0">Obligatorio: bola de nieve</div>
+                <div class="item" style="background-color: #b0b0b0">Prohibido rerol</div>
+                <div class="item" style="background-color: #b0b0b0">Prohibido Flash</div>
+                <div class="item" style="background-color: #b0b0b0">No usar el tp de base</div>
+
+                <!-- Inusual Items -->
+                <div class="item" style="background-color: #4b69ff">Partida a 10 kills</div>
+                <div class="item" style="background-color: #4b69ff">Partida a 30 kills</div>
+                <div class="item" style="background-color: #4b69ff">AKF durante 5 mins</div>
+                <div class="item" style="background-color: #4b69ff">Partida a nexo</div>
+                <div class="item" style="background-color: #4b69ff">Hechizos elegidos por ruleta</div>
+                <div class="item" style="background-color: #4b69ff">Partida sin hechizos</div>
+                <div class="item" style="background-color: #4b69ff">3 bans de item x team</div>
+
+                <!-- Raro Items -->
+                <div class="item" style="background-color: #8847ff">2 hándicap</div>
+                <div class="item" style="background-color: #8847ff">Primer item ruleta</div>
+                <div class="item" style="background-color: #8847ff">1 champ elegido por rivales</div>
+                <div class="item" style="background-color: #8847ff">Campeones aleatorios</div>
+                <div class="item" style="background-color: #8847ff">Partida sin discord</div>
+                <div class="item" style="background-color: #8847ff">Pacifist rout</div>
+                <div class="item" style="background-color: #8847ff">Reroll de hándicap</div>
+
+                <!-- Épico Items -->
+                <div class="item" style="background-color: #d32ce6">Build monocromática</div>
+                <div class="item" style="background-color: #d32ce6">Partida sin items</div>
+                <div class="item" style="background-color: #d32ce6">Personajes solo melee/ranged</div>
+                <div class="item" style="background-color: #d32ce6">Partida botas/componentes</div>
+                <div class="item" style="background-color: #d32ce6">Partida solo dagas</div>
+                <div class="item" style="background-color: #d32ce6">Solo items completos</div>
+                <div class="item" style="background-color: #d32ce6">3 vs 3 pasa a 2 vs 2</div>
+
+                <!-- Legendario Items -->
+                <div class="item" style="background-color: #eb4b4b">Partida a primera sangre</div>
+                <div class="item" style="background-color: #eb4b4b">Partida solo bushes</div>
+                <div class="item" style="background-color: #eb4b4b">Royal rumble 1 vs 1</div>
+                <div class="item" style="background-color: #eb4b4b">Selecciona hándicap</div>
+                <div class="item" style="background-color: #eb4b4b">Carrera de aram</div>
+
+                <!-- Easter Egg Item -->
+                <div class="item" style="background-color: #ffd700">3 vs 3 en la grieta</div>
+            </div>
+            <div class="needle"></div>
+        </div>
+
+        <div id="result"></div>
+    </div>
+    <audio id="ruleta-sound" src="sounds/ruleta.mp3"></audio>
+    <script src="script.js"></script>
+    <!-- Modal para mostrar el ítem seleccionado -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-item-name"></h2>
+        </div>
+    </div>
+</body>
+</html>

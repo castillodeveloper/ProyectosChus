@@ -1,0 +1,134 @@
+/* Reinicio de márgenes y ajustes globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importa la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    background-color: #1b1b1b;
+    color: #c8aa6e;
+    background-image: url('imagenes/background.jpg');
+    background-size: contain;
+    position: relative;
+}
+
+/* Contenedor central con estilo */
+.container {
+    text-align: center;
+    color: #c8aa6e;
+    background-color: #403f50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los encabezados principales */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #c8aa6e;
+}
+
+/* Caja con efecto hover */
+.box:hover {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #007acc;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    transition: 1s;
+}
+
+/* Contenedor de la ruleta */
+.roulette-container {
+    position: relative;
+    width: 600px;
+    height: 100px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #555;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.roulette {
+    display: flex;
+    transition: transform 0.5s ease; /* Ajuste para el movimiento de la ruleta */
+}
+
+/* Elementos de la ruleta */
+.item {
+    min-width: 150px;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    border-right: 1px solid #444;
+    color: #fff;
+}
+
+/* Estilo de la aguja */
+.needle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 2px;
+    background-color: yellow;
+}
+
+/* Resultado de la ruleta */
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantener el modal en su lugar */
+    z-index: 1; /* Asegurar que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo negro */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    text-align: center;
+    font-family: 'Cinzel', serif; /* Aplicar fuente también en el modal */
+    color: #403f50;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
